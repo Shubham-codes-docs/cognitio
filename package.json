@@ -34,7 +34,6 @@
     "android >= 4"
   ],
   "dependencies": {
-    "firebase": "^9.10.0",
-    "tsparticles-engine": "^2.3.2"
+    "firebase": "^9.10.0"
   }
 }
