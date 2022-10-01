@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/*!
+=========================================================
+* LeadMark Landing page
+=========================================================
+
+* Copyright: 2019 DevCRUD (https://devcrud.com)
+* Licensed: (https://devcrud.com/licenses)
+* Coded by www.devcrud.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 :root {
   --blue: #007bff;
@@ -4329,7 +4342,7 @@ input[type="button"].btn-block {
   background-color: #ff6e42;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
        appearance: none;
@@ -4337,7 +4350,7 @@ input[type="button"].btn-block {
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
-    -webkit-transition: none;
+    -moz-transition: none;
     transition: none;
   }
 }
@@ -4365,14 +4378,14 @@ input[type="button"].btn-block {
   background-color: #ff6e42;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
-    -webkit-transition: none;
+    -ms-transition: none;
     transition: none;
   }
 }
@@ -4587,10 +4600,6 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
-}
-
-.navbar-brand img{
-  max-width: 100rem;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -5031,20 +5040,6 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
-}
-
-.text-justify{
-  text-align: justify;
-}
-
-.reset{
-  color:inherit;
-  padding: 0;
-  margin: 0;
-}
-
-.reset:hover{
-  color: inherit;
 }
 
 .card {
@@ -11215,7 +11210,7 @@ textarea.form-control {
 }
 
 .navbar .navbar-brand img {
-  width: 200px;
+  width: 60px;
 }
 
 .navbar .nav-link {
@@ -11350,12 +11345,6 @@ textarea.form-control {
   border-width: 0;
 }
 
-.gallery-image{
-  max-width: 20rem;
-  margin:1rem;
-  aspect-ratio: 1;
-}
-
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11385,12 +11374,6 @@ textarea.form-control {
   padding: 4px 0;
   display: inline-block;
   margin: 0;
-}
-
-@media(max-width:762px){
-  .second-image{
-    max-width:22rem;
-  }
 }
 
 .footer .brand {
@@ -11439,15 +11422,9 @@ textarea.form-control {
   position: relative;
   height: 100vh;
   min-height: 500px;
-  background: url(../imgs/images/5.jpeg) no-repeat center bottom fixed;
+  background: url(../imgs/header.jpg) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
-}
-
-#register-form .required::after{
-  content: '*';
-  color: red;
-  margin-left: 2px;
 }
 
 .header .overlay {
@@ -11456,7 +11433,7 @@ textarea.form-control {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
