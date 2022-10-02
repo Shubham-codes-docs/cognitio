@@ -3812,3 +3812,23 @@
 .fas {
   font-weight: 900;
 }
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+
+@media(max-width:762px){
+  
+  .event-image{
+    max-width: 20rem;
+  }
+
+  .fs-5{
+    font-size: 1rem;
+  }  
+}

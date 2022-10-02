@@ -10892,6 +10892,10 @@ a.text-dark:hover, a.text-dark:focus {
   color:inherit;
 }
 
+.reset:hover{
+  color: var(--dark);
+}
+
 .visible {
   visibility: visible !important;
 }
@@ -11443,6 +11447,12 @@ textarea.form-control {
   overflow: hidden;
 }
 
+@media(max-width:762px){
+  .header{
+    background-size: 100% 100%;
+  }
+}
+
 .header .overlay {
   position: absolute;
   left: 0;
@@ -11558,6 +11568,18 @@ textarea.form-control {
   background: #ffbca8;
 }
 
+/*about section */
+
+#about .second-image{
+  max-width: 30rem;
+}
+
+@media(max-width:768px){
+  #about .second-image{
+    max-width: 22rem;
+  }
+}
+
 .section {
   padding: 80px 0;
 }
@@ -11642,6 +11664,13 @@ textarea.form-control {
   background: url(../imgs/section.jpg) no-repeat center top fixed;
   background-size: cover;
   color: #fff;
+}
+
+@media(max-width:762px) {
+  .section.has-img-bg{
+    background: url(../imgs/section.jpg) no-repeat center top fixed;
+  }
+  
 }
 
 .section.has-img-bg * {
