@@ -11442,16 +11442,16 @@ textarea.form-control {
   position: relative;
   height: 100vh;
   min-height: 500px;
-  background: url(../imgs/images/5.jpeg) no-repeat center center fixed;
+  background: url(../imgs/images/background.jpg) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
 }
 
-@media(max-width:762px){
+/* @media(max-width:762px){
   .header{
     background-size: 100% 100%;
   }
-}
+} */
 
 .header .overlay {
   position: absolute;
@@ -11487,7 +11487,17 @@ textarea.form-control {
   letter-spacing: 8px;
   word-spacing: 10px;
   text-align: center;
-  opacity: .5;
+  opacity: 0.3;
+}
+
+.header-img{
+  max-width:40rem;
+}
+
+@media(max-width:762px){
+  .header-img{
+    max-width: 20rem;
+  }
 }
 
 .header .overlay .title {

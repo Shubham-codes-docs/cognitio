@@ -63,7 +63,8 @@
         <p class="fs-2">
           <strong class="fs-2">Name:-</strong>Santosh Kumar Paul<br />
           <strong class="fs-2">UPI Id:-</strong>6200678249@ybl<br />
-          <strong class="fs-2">Phone Number</strong>6200678249
+          <strong class="fs-2">Phone Number</strong>6200678249<br/>
+          The Registration fee for Cognitio is <strong>Rs 300/-</strong>
         </p>
       </div>
     </section>
@@ -490,7 +491,7 @@
       const transId = document.querySelector("input[name='transId']");
       regnTag.addEventListener("change", (e) => {
         let regnValue = e.target.value;
-        let regex = /^2020UGME/i;
+        let regex = /UGME/i;
         if (regex.test(regnValue)) {
           transId.disabled = true;
         }

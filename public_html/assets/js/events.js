@@ -132,7 +132,7 @@ let data = {
     eh: ["Sidharth Srivastava (8009878844)", "Rohit Kumar(9709804111)"],
     prize: "5500",
     name: "CANSYS",
-    img:''
+    img: "./assets/imgs/events/Cansys.jpg"
   },
   assemblage: {
     desc: "Strength of mechanical models and engineering structures is an important area of study and experimentation. Concept and principles dealing with truss systems, beam loadings, stress-strain calculation and representation are imperative for evaluating the failure point of structures. Also, the knowledge of material science and vibration is essential to understand the mechanical behaviors and dynamics of system under consideration. This event deals with fabrication of a bridge model and its strength testing using varied type of loads.",
@@ -263,7 +263,7 @@ let data = {
       },
       {
         heading: "Round 2",
-        points: ["Written Test involving related physical concepts. "],
+        points: ["Model making followed by Field launching. "],
       },
     ],
     eh: [
@@ -287,7 +287,7 @@ let data = {
     eh: ["Prasoon Jha (8340622615)", "  Aniket Mishra (8603025125)"],
     prize: "4500",
     name: "OPEN STAGE",
-    img:'./assets/imgs/events/OPEN STAGE (1).png'
+    img:'./assets/imgs/events/OPEN STAGE.png'
   },
 };
 
