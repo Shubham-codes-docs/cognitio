@@ -119,7 +119,7 @@ let data = {
       {
         heading: "Round 1",
         points: [
-          "Teams must bring their own laptops with chargers and extension cords.",
+          "3-D part modelling and drafting in CATIA/Solidworks.",
         ],
       },
       {
