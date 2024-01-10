@@ -199,6 +199,12 @@
               <option selected>Choose Branch</option>
               <option value="mech">Mechanical Engineering</option>
               <option value="pi">Production Engineering</option>
+              <option value="ecm">Engineering and computational Mechanics</option>
+              <option value="ee">Electrical Engineering</option>
+              <option value="ece">Electronic and Communication Engineering</option>
+              <option value="cse">Computer Science And Engineering</option>
+              <option value="civil">Civil Engineering</option>
+              <option value="meta">Metallurgical Engineering</option>
             </select>
           </div>
         </div>
@@ -460,25 +466,19 @@
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-      import {
-        getDatabase,
-        ref,
-        set,
-      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
 
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
-        apiKey: "AIzaSyAwTMvEui9p0X1V_qtHxIPvyuFTWz083VE",
-        authDomain: "cognitio-2022.firebaseapp.com",
-        projectId: "cognitio-2022",
-        storageBucket: "cognitio-2022.appspot.com",
-        messagingSenderId: "481340855725",
-        appId: "1:481340855725:web:fb4b0f60059b484184fd24",
-        measurementId: "G-WT928RYLD5",
-        databaseURL: "https://cognitio-2022-default-rtdb.firebaseio.com/",
+          apiKey: "AIzaSyAwTMvEui9p0X1V_qtHxIPvyuFTWz083VE",
+          authDomain: "cognitio-2022.firebaseapp.com",
+          projectId: "cognitio-2022",
+          storageBucket: "cognitio-2022.appspot.com",
+          messagingSenderId: "481340855725",
+          appId: "1:481340855725:web:fb4b0f60059b484184fd24",
+          measurementId: "G-WT928RYLD5",
+          databaseURL: "https://cognitio-2022-default-rtdb.firebaseio.com/",
       };
 
       // Initialize Firebase
@@ -489,68 +489,89 @@
       //check if registration number is to disable payment
       const regnTag = document.querySelector("input[name='register']");
       const transId = document.querySelector("input[name='transId']");
+      const branchSelect = document.querySelector("select[name='branch']");
+
       regnTag.addEventListener("change", (e) => {
-        let regnValue = e.target.value;
-        let regex = /UGME/i;
-        if (regex.test(regnValue)) {
-          transId.disabled = true;
-        }
+          let regnValue = e.target.value;
+          let regex = /UGME/i;
+          if (regex.test(regnValue)) {
+              transId.disabled = true;
+          } else {
+              transId.disabled = false;
+          }
+      });
+
+      // Disable transaction ID for certain branches
+      branchSelect.addEventListener("change", (e) => {
+          let selectedBranch = e.target.value;
+          let transIdInput = document.querySelector("input[name='transId']");
+          let disableTransactionIdBranches = ["mech", "ecm"];
+
+          if (disableTransactionIdBranches.includes(selectedBranch)) {
+              document.querySelector("label[for='transId']").classList.remove("required");
+              transIdInput.classList.add("disabled"); 
+              transIdInput.disabled = true;
+          } else {
+              transIdInput.classList.remove("disabled");
+              document.querySelector("label[for='transId']").classList.add("required"); 
+              transIdInput.disabled = false;
+          }
       });
 
       //submit handler
       let submitBtn = document.querySelector(".submit");
       submitBtn.addEventListener("click", async (e) => {
-        e.preventDefault();
-        let sname = e.target.parentElement[(name = "name")].value;
-        let regnNo = e.target.parentElement[(name = "register")].value;
-        let email = e.target.parentElement[(name = "email")].value;
-        let batch = e.target.parentElement[(name = "batch")].value;
-        let transIdValue = transId.value;
-        let number = e.target.parentElement[(name = "number")].value;
-        let college = e.target.parentElement[(name = "college")].value;
-        let branch = e.target.parentElement[(name = "branch")].value;
-        if (sname === "" || regnNo === "" || email == "" || number == "") {
-          let p = document.createElement("p");
-          p.textContent = "Incomplete Fields";
-          p.style.color = "red";
-          e.target.parentElement.insertBefore(
-            p,
-            e.target.parentElement.firstChild
-          );
-          setTimeout(() => {
-            p.remove();
-          }, 5000);
-          return;
-        }
-        let events = Array.from(
-          e.target.parentElement.querySelectorAll("input[name=check]:checked")
-        ).map((e) => e.defaultValue);
-        set(ref(db, `registered_user/${regnNo}`), {
-          name: sname,
-          regnNo,
-          email,
-          number,
-          batch,
-          college,
-          transId: transIdValue,
-          events,
-        })
-          .then(() => {
-            e.target.parentElement[(name = "name")].value = "";
-            e.target.parentElement[(name = "register")].value = "";
-            e.target.parentElement[(name = "email")].value = "";
-            e.target.parentElement[(name = "batch")].value = "";
-            e.target.parentElement[(name = "number")].value = "";
-            transId.value = "";
-            e.target.parentElement[(name = "college")].value = "";
-            e.target.parentElement[(name = "branch")].value;
-            const modalBtn = document.querySelector(".modal-button");
-            console.log(modalBtn);
-            modalBtn.click();
-          })
-          .catch((err) => console.log(err));
+          e.preventDefault();
+          let sname = e.target.parentElement[(name = "name")].value;
+          let regnNo = e.target.parentElement[(name = "register")].value;
+          let email = e.target.parentElement[(name = "email")].value;
+          let batch = e.target.parentElement[(name = "batch")].value;
+          let transIdValue = transId.value;
+          let number = e.target.parentElement[(name = "number")].value;
+          let college = e.target.parentElement[(name = "college")].value;
+          let branch = e.target.parentElement[(name = "branch")].value;
+          if (sname === "" || regnNo === "" || email == "" || number == "") {
+              let p = document.createElement("p");
+              p.textContent = "Incomplete Fields";
+              p.style.color = "red";
+              e.target.parentElement.insertBefore(
+                  p,
+                  e.target.parentElement.firstChild
+              );
+              setTimeout(() => {
+                  p.remove();
+              }, 5000);
+              return;
+          }
+          let events = Array.from(
+              e.target.parentElement.querySelectorAll("input[name=check]:checked")
+          ).map((e) => e.defaultValue);
+          set(ref(db, `registered_user/${regnNo}`), {
+                  name: sname,
+                  regnNo,
+                  email,
+                  number,
+                  batch,
+                  college,
+                  transId: transIdValue,
+                  events,
+              })
+              .then(() => {
+                  e.target.parentElement[(name = "name")].value = "";
+                  e.target.parentElement[(name = "register")].value = "";
+                  e.target.parentElement[(name = "email")].value = "";
+                  e.target.parentElement[(name = "batch")].value = "";
+                  e.target.parentElement[(name = "number")].value = "";
+                  transId.value = "";
+                  e.target.parentElement[(name = "college")].value = "";
+                  e.target.parentElement[(name = "branch")].value;
+                  const modalBtn = document.querySelector(".modal-button");
+                  console.log(modalBtn);
+                  modalBtn.click();
+              })
+              .catch((err) => console.log(err));
       });
-    </script>
+  </script>
     <script src="assets/js/leadmark.js"></script>
   </body>
 </html>
