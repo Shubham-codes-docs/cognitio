@@ -29,7 +29,7 @@ let data = {
     img:'./assets/imgs/events/Elevator Pitch (1).jpg'
   },
   quiriosity: {
-    desc: "India is emerging as a world leader in the field of innovation, and new age start-ups are the fore runners of this development. This years quriosity will be on start-ups. To all the quiz geeks out there, brace yourself and be ready for your quizzing mettle to be tested. It is time to compete with the finest brains of the institute and enrich your quizzing skills. QURIOSITY provides a platform to explore the charm of science and technology. To come up as a winner, you need to possess noetic and quick thinking.",
+    desc: "",
     details1: ["Number of students in a team: 2"],
     details2: [
       {
@@ -289,6 +289,24 @@ let data = {
     name: "OPEN STAGE",
     img:'./assets/imgs/events/OPEN STAGE.png'
   },
+  roboWar: {
+    desc: "For COGNITIO 24 we propose an exhilarating Robo War event that spans across three engaging rounds, challenging students to unleash their creativity, innovation, and engineering prowess. The event is designed to foster teamwork, problem-solving skills, and hands-on experience in building and battling robots",
+    details1: [
+      "The competition will be played on a knock-out basis consisting of 2 players at a time",
+      "The maximum duration of each War/Fight will be 5 minutes",
+      "The robot will win if the robot successfully immobilizes the opponent or through it out of the arena",
+      "If within 5 minutes if neither of the robot is knocked out then they will be judged by following criteria-Aggression,Control,Damage,Strategy",
+      "Match will be interrupted if communication between robot and operator breaks",
+      "No member will be allowed to enter in the war zone without permission of coordinators",
+      "The organizers reserve the rights to change any or all of the above rules as they deem fit",
+      "Violation of any the above rules will lead to disqualification",
+      "Judges' decision shall be treated as final and binding on all"
+    ],
+    eh: [""],
+    prize: "",
+    name: "ROBO WAR",
+    img:'./assets/imgs/events/OPEN STAGE.png'
+  },
 };
 
 const urlSearchParams = new URLSearchParams(window.location.search);
@@ -346,7 +364,6 @@ switch (params.q) {
   case "quriosity":
     hydrateData(data.quiriosity);
     break;
-
   case "assemblage":
     hydrateData(data.assemblage);
     break;
@@ -373,5 +390,8 @@ switch (params.q) {
     break;
   case "openstage":
     hydrateData(data.os);
+    break;
+  case "roboWar":
+    hydrateData(data.roboWar);
     break;
 }
