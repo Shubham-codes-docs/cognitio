@@ -63,7 +63,7 @@
         <p class="fs-2">
           <strong class="fs-2">Name:-</strong>Santosh Kumar Paul<br />
           <strong class="fs-2">UPI Id:-</strong>6200678249@ybl<br />
-          <strong class="fs-2">Phone Number</strong>6200678249<br/>
+          <strong class="fs-2">Phone Number</strong>6200678249<br />
           The Registration fee for Cognitio is <strong>Rs 300/-</strong>
         </p>
       </div>
@@ -93,8 +93,13 @@
             </p>
             <ul>
               <li>
-                <a href="https://chat.whatsapp.com/DHnoUGQv1TADbTJ4LOVbmA"
+                <a href="https://chat.whatsapp.com/FBZmcW3EowyIGHUzaO6CKq"
                   >Link 1</a
+                >
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/Du24FgzlKsRD0EDTp9QwqL"
+                  >Link 2</a
                 >
               </li>
             </ul>
@@ -150,12 +155,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="batch">Batch</label>
-            <input
-              type="text"
-              class="form-control"
-              id="batch"
-              name="batch"
-            />
+            <input type="text" class="form-control" id="batch" name="batch" />
           </div>
         </div>
         <div class="form-row">
@@ -199,9 +199,13 @@
               <option selected>Choose Branch</option>
               <option value="mech">Mechanical Engineering</option>
               <option value="pi">Production Engineering</option>
-              <option value="ecm">Engineering and computational Mechanics</option>
+              <option value="ecm">
+                Engineering and computational Mechanics
+              </option>
               <option value="ee">Electrical Engineering</option>
-              <option value="ece">Electronic and Communication Engineering</option>
+              <option value="ece">
+                Electronic and Communication Engineering
+              </option>
               <option value="cse">Computer Science And Engineering</option>
               <option value="civil">Civil Engineering</option>
               <option value="meta">Metallurgical Engineering</option>
@@ -311,20 +315,6 @@
               <input
                 class="form-check-input"
                 type="checkbox"
-                id="Battle-of-Bureaucrats"
-                value="Battle-of-Bureaucrats"
-                name="check"
-              />
-              <label class="form-check-label" for="Battle-of-Bureaucrats">
-                Battle of Bureaucrats
-              </label>
-            </div>
-          </div>
-          <div class="form-group col-md-2">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
                 id="Dictum-Symposium"
                 value="Dictum-Symposium"
                 name="check"
@@ -346,6 +336,18 @@
               <label class="form-check-label" for="Shoot-at-Sight">
                 Shoot at Sight
               </label>
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="robo-war"
+                value="robo-war"
+                name="check"
+              />
+              <label class="form-check-label" for="robo-war"> Robo War </label>
             </div>
           </div>
           <div class="form-group col-md-2">
@@ -466,19 +468,22 @@
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
 
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
-          apiKey: "AIzaSyAwTMvEui9p0X1V_qtHxIPvyuFTWz083VE",
-          authDomain: "cognitio-2024.firebaseapp.com",
-          projectId: "cognitio-2024",
-          storageBucket: "cognitio-2024.appspot.com",
-          messagingSenderId: "481340855725",
-          appId: "1:481340855725:web:fb4b0f60059b484184fd24",
-          measurementId: "G-WT928RYLD5",
-          databaseURL: "https://cognitio-2024-default-rtdb.firebaseio.com/",
+        apiKey: "AIzaSyCuvrZMWe9tlYT69eYTEzVk0N_T4vCa44M",
+        authDomain: "cognitio-24-1e739.firebaseapp.com",
+        projectId: "cognitio-24-1e739",
+        storageBucket: "cognitio-24-1e739.appspot.com",
+        messagingSenderId: "950141558994",
+        appId: "1:950141558994:web:8e3e5763a4da8b36784d0b",
       };
 
       // Initialize Firebase
@@ -492,86 +497,90 @@
       const branchSelect = document.querySelector("select[name='branch']");
 
       regnTag.addEventListener("change", (e) => {
-          let regnValue = e.target.value;
-          let regex = /UGME/i;
-          if (regex.test(regnValue)) {
-              transId.disabled = true;
-          } else {
-              transId.disabled = false;
-          }
+        let regnValue = e.target.value;
+        let regex = /UGME/i;
+        if (regex.test(regnValue)) {
+          transId.disabled = true;
+        } else {
+          transId.disabled = false;
+        }
       });
 
       // Disable transaction ID for certain branches
       branchSelect.addEventListener("change", (e) => {
-          let selectedBranch = e.target.value;
-          let transIdInput = document.querySelector("input[name='transId']");
-          let disableTransactionIdBranches = ["mech", "ecm"];
+        let selectedBranch = e.target.value;
+        let transIdInput = document.querySelector("input[name='transId']");
+        let disableTransactionIdBranches = ["mech", "ecm"];
 
-          if (disableTransactionIdBranches.includes(selectedBranch)) {
-              document.querySelector("label[for='transId']").classList.remove("required");
-              transIdInput.classList.add("disabled"); 
-              transIdInput.disabled = true;
-          } else {
-              transIdInput.classList.remove("disabled");
-              document.querySelector("label[for='transId']").classList.add("required"); 
-              transIdInput.disabled = false;
-          }
+        if (disableTransactionIdBranches.includes(selectedBranch)) {
+          document
+            .querySelector("label[for='transId']")
+            .classList.remove("required");
+          transIdInput.classList.add("disabled");
+          transIdInput.disabled = true;
+        } else {
+          transIdInput.classList.remove("disabled");
+          document
+            .querySelector("label[for='transId']")
+            .classList.add("required");
+          transIdInput.disabled = false;
+        }
       });
 
       //submit handler
       let submitBtn = document.querySelector(".submit");
       submitBtn.addEventListener("click", async (e) => {
-          e.preventDefault();
-          let sname = e.target.parentElement[(name = "name")].value;
-          let regnNo = e.target.parentElement[(name = "register")].value;
-          let email = e.target.parentElement[(name = "email")].value;
-          let batch = e.target.parentElement[(name = "batch")].value;
-          let transIdValue = transId.value;
-          let number = e.target.parentElement[(name = "number")].value;
-          let college = e.target.parentElement[(name = "college")].value;
-          let branch = e.target.parentElement[(name = "branch")].value;
-          if (sname === "" || regnNo === "" || email == "" || number == "") {
-              let p = document.createElement("p");
-              p.textContent = "Incomplete Fields";
-              p.style.color = "red";
-              e.target.parentElement.insertBefore(
-                  p,
-                  e.target.parentElement.firstChild
-              );
-              setTimeout(() => {
-                  p.remove();
-              }, 5000);
-              return;
-          }
-          let events = Array.from(
-              e.target.parentElement.querySelectorAll("input[name=check]:checked")
-          ).map((e) => e.defaultValue);
-          set(ref(db, `registered_user/${regnNo}`), {
-                  name: sname,
-                  regnNo,
-                  email,
-                  number,
-                  batch,
-                  college,
-                  transId: transIdValue,
-                  events,
-              })
-              .then(() => {
-                  e.target.parentElement[(name = "name")].value = "";
-                  e.target.parentElement[(name = "register")].value = "";
-                  e.target.parentElement[(name = "email")].value = "";
-                  e.target.parentElement[(name = "batch")].value = "";
-                  e.target.parentElement[(name = "number")].value = "";
-                  transId.value = "";
-                  e.target.parentElement[(name = "college")].value = "";
-                  e.target.parentElement[(name = "branch")].value;
-                  const modalBtn = document.querySelector(".modal-button");
-                  console.log(modalBtn);
-                  modalBtn.click();
-              })
-              .catch((err) => console.log(err));
+        e.preventDefault();
+        let sname = e.target.parentElement[(name = "name")].value;
+        let regnNo = e.target.parentElement[(name = "register")].value;
+        let email = e.target.parentElement[(name = "email")].value;
+        let batch = e.target.parentElement[(name = "batch")].value;
+        let transIdValue = transId.value;
+        let number = e.target.parentElement[(name = "number")].value;
+        let college = e.target.parentElement[(name = "college")].value;
+        let branch = e.target.parentElement[(name = "branch")].value;
+        if (sname === "" || regnNo === "" || email == "" || number == "") {
+          let p = document.createElement("p");
+          p.textContent = "Incomplete Fields";
+          p.style.color = "red";
+          e.target.parentElement.insertBefore(
+            p,
+            e.target.parentElement.firstChild
+          );
+          setTimeout(() => {
+            p.remove();
+          }, 5000);
+          return;
+        }
+        let events = Array.from(
+          e.target.parentElement.querySelectorAll("input[name=check]:checked")
+        ).map((e) => e.defaultValue);
+        set(ref(db, `registered_user/${regnNo}`), {
+          name: sname,
+          regnNo,
+          email,
+          number,
+          batch,
+          college,
+          transId: transIdValue,
+          events,
+        })
+          .then(() => {
+            e.target.parentElement[(name = "name")].value = "";
+            e.target.parentElement[(name = "register")].value = "";
+            e.target.parentElement[(name = "email")].value = "";
+            e.target.parentElement[(name = "batch")].value = "";
+            e.target.parentElement[(name = "number")].value = "";
+            transId.value = "";
+            e.target.parentElement[(name = "college")].value = "";
+            e.target.parentElement[(name = "branch")].value;
+            const modalBtn = document.querySelector(".modal-button");
+            console.log(modalBtn);
+            modalBtn.click();
+          })
+          .catch((err) => console.log(err));
       });
-  </script>
+    </script>
     <script src="assets/js/leadmark.js"></script>
   </body>
 </html>

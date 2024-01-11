@@ -1,6 +1,6 @@
 let data = {
   ep: {
-    desc: "COGNITIO’22 brings a unique opportunity to test your mettle in form of ELEVATOR PITCH. In this event, the participants must present their unique startup idea. Ideas can be from any sector. Overall, you must present B-PLAN for your startup. This must include Market Research, Competitor analysis, USP, Revenue model, Investments Required and Marketing Strategy. Students will be judged on above parameters. Apart from these one may include points that seem relevant to the B-PLAN.",
+    desc: "COGNITIO’24 brings a unique opportunity to test your mettle in form of ELEVATOR PITCH. In this event, the participants must present their unique startup idea. Ideas can be from any sector. Overall, you must present B-PLAN for your startup. This must include Market Research, Competitor analysis, USP, Revenue model, Investments Required and Marketing Strategy. Students will be judged on above parameters. Apart from these one may include points that seem relevant to the B-PLAN.",
     details1: [
       "Number of students in a team: 2",
       "The problem statement is open to innovation.",
@@ -23,10 +23,10 @@ let data = {
         ],
       },
     ],
-    eh: ["Abhinav Raj (8825346878)", " Rishav Raj (9525018921)"],
+    eh: ["Amit Kumar Poddar", " Saurav Kumar Jaiswal (9525018921)"],
     prize: "8000",
     name: "Elevator Pitch",
-    img:'./assets/imgs/events/Elevator Pitch (1).jpg'
+    img: "./assets/imgs/events/elevator-pitch.webp",
   },
   quiriosity: {
     desc: "",
@@ -43,10 +43,10 @@ let data = {
         ],
       },
     ],
-    eh: [" Nilay Kumar (7903627451)", "Ankita (7654875946)"],
+    eh: [" Ritika Somya ", "Vinisha Komali "],
     prize: "6000",
     name: "QURIOSITY",
-    img:'./assets/imgs/events/Quriosity (1).jpg'
+    img: "./assets/imgs/events/quriosity.webp",
   },
   placestation: {
     desc: "Do you consider yourself an all-rounder? Do you have a unique way of accomplishing goals? Do you stand out in a crowd? Come enter this corporate labyrinth, where one can live and experience the nerve-wracking placement session in a real time dynamic environment with a series of stations comprising of the comprehensive written test, expressive group discussion as you make your way through the maze to the final round which is the personal interview. It’s an all round competitive event with a motive to guide the students about campus placements and at the same time select the best. So if you think you’ve got what it takes to make a mark, then do come and be a part of this grand event",
@@ -74,17 +74,17 @@ let data = {
       },
     ],
     eh: [
-      "Divya Chitransh(analytics)(8102222514)",
-      "Adarsh Singh(analytics):(9113349029)",
-      "Ragini Tejaswini(core):(8789696504)",
-      "Ritik Sharma(core):(8302433933)",
-      "Payal  Kumari(core):(9334012252)",
-      "Rishi Raj Singh(SDE):(6291426696)",
-      "Surjit Kumar(SDE):(7070308838)",
+      "Gourav Kumar(analytics)",
+      "Aniket Kumar Thakur(analytics):",
+      "Vaibhav Kumar Mishra (core):",
+      "Somil Gupta(core):",
+      "Shekhar Suman(core):",
+      "Amrit Shukla(SDE):",
+      "Shubham TIwary(SDE):(9973663241)",
     ],
     prize: "4500",
     name: "PLACE STATION",
-    img:'./assets/imgs/events/PLACE STATION (1).png'
+    img: "./assets/imgs/events/place-station.webp",
   },
   conundrum: {
     desc: "With the advent of Make in India, industries are transforming to a new generation. This advancement demands the engineers to showcase their skills and prove their mettle. Deep insights of engineering concepts/principles create an incision on our mind. The CONUNDRUM deals with understanding of core mechanical and manufacturing discipline with primary focus on expertise in problem solving, technical terms and ability to explain what you perceive. Let your grey cells encounter this mechanical CONUNDRUM",
@@ -104,10 +104,10 @@ let data = {
         points: ["Personal Interview (Technical)."],
       },
     ],
-    eh: ["Ankit Kumar (8340292611)", "Rohit Kumar(7488159101)"],
+    eh: ["Prashant Kumar ", "Navneet Kumar"],
     prize: "4500",
     name: "CONUNDRUM",
-    img:'./assets/imgs/events/PRIZES WORTH ₹.png'
+    img: "./assets/imgs/events/conundrum.webp",
   },
   cansys: {
     desc: "Design skills leads to augmentation of visualization and multi-dimension quality check of models supported by detailed analysis reports. Designing and analysis of structural and mechanical components gives a fair idea of feasibility of dimension and geometry for the optimum operation output of the model. This event deals with modeling and simulation of part body in CATIA/Solidworks backed by its analysis using ANSYS.",
@@ -118,9 +118,7 @@ let data = {
     details2: [
       {
         heading: "Round 1",
-        points: [
-          "3-D part modelling and drafting in CATIA/Solidworks.",
-        ],
+        points: ["3-D part modelling and drafting in CATIA/Solidworks."],
       },
       {
         heading: "Round 2",
@@ -129,10 +127,10 @@ let data = {
         ],
       },
     ],
-    eh: ["Sidharth Srivastava (8009878844)", "Rohit Kumar(9709804111)"],
+    eh: ["Mrinal Bharadwaj ", "Arun Yadav"],
     prize: "5500",
     name: "CANSYS",
-    img: "./assets/imgs/events/Cansys.jpg"
+    img: "./assets/imgs/events/cansys.webp",
   },
   assemblage: {
     desc: "Strength of mechanical models and engineering structures is an important area of study and experimentation. Concept and principles dealing with truss systems, beam loadings, stress-strain calculation and representation are imperative for evaluating the failure point of structures. Also, the knowledge of material science and vibration is essential to understand the mechanical behaviors and dynamics of system under consideration. This event deals with fabrication of a bridge model and its strength testing using varied type of loads.",
@@ -154,13 +152,13 @@ let data = {
         ],
       },
     ],
-    eh: ["Ranjit Kumar Yadav(7061340811)", "Sumit Kumar Singh (9576488785)"],
+    eh: ["Yuvraj Singh Shekhawat(7061340811)", "Rupesh Kumar"],
     prize: "6000",
     name: "ASSEMBLAGE",
-    img:'./assets/imgs/events/ASSEMBLAGE (1).png'
+    img: "./assets/imgs/events/ASSEMBLAGE.webp",
   },
   dictumSymposium: {
-    desc: " Greatest quality of a leader is wisdom of opinion and way of expression. COGNITIO ’22 brings you the opportunity to get into the war of words. Buckle up, for this is the event you craved for. Let your larynx vibrate and your words echo the whole house. DICTUM SYMPOSIUM brings all of you the experience of speaking as a leader. The event deals with expression of opinion/defending your stand on corporate issues by highlighting its social, economic, environmental and technical impacts.",
+    desc: " Greatest quality of a leader is wisdom of opinion and way of expression. COGNITIO ’24 brings you the opportunity to get into the war of words. Buckle up, for this is the event you craved for. Let your larynx vibrate and your words echo the whole house. DICTUM SYMPOSIUM brings all of you the experience of speaking as a leader. The event deals with expression of opinion/defending your stand on corporate issues by highlighting its social, economic, environmental and technical impacts.",
     details1: [" Number of students in a team: 2"],
     details2: [
       {
@@ -182,40 +180,10 @@ let data = {
         ],
       },
     ],
-    eh: [
-      "Arsalan Khan (8102104079)",
-      "Annanya Singh(8840603244)",
-      "Srishti(6207173557)",
-    ],
+    eh: ["Alisha Kumari", "Pratibha Mitra", "Prachi Singh", "Jyoti Kumari"],
     prize: "4500",
     name: "DICTUM SYMPOSIUM",
-    img:'./assets/imgs/events/Dictum Symposium (1).jpg'
-  },
-  battleofbureaucrats: {
-    desc: "  Bureaucracy is the permanent Executive branch of the Republic of India. Civil Servants in India are the unsung heroes of Indian Federal System from Secretaries in Govt. Of India to the betwixt amidst the citizens and the government.  And thus, rightly quoted as the backbone of administrative machinery in the country. This event goes for a check over the proficiency of a particular and the qualities requisite to etch herself/ himself as bureaucrats in the Steel Frame of the Nation.",
-    details1: ["Students need to participate individually"],
-    details2: [
-      {
-        heading: "Round 1",
-        points: ["Pen paper based objective preliminary test"],
-      },
-      {
-        heading: "Round 2",
-        points: [
-          "Pen paper based descriptive writing on current social and geo-political issues",
-        ],
-      },
-      {
-        heading: "Round 3",
-        points: [
-          "Personality Test. Note: The entire event will comprise of subjects like General Studies, General Science and Current Affairs. The scores of all THREE rounds will be taken into consideration for finalizing the result.",
-        ],
-      },
-    ],
-    eh: ["Pranjal (9507853894)", "Pratik Saurav(6200178288)"],
-    prize: "4500",
-    name: "Battle of Bureaucrats",
-    img:'./assets/imgs/events/BATTLE OF BUREAUCRATS (1).png'
+    img: "./assets/imgs/events/dictum-symposium.webp",
   },
   radiation: {
     desc: "Mechanical engineering deals with making of machines that makes our life easier. The current era is all about creating technology that are highly efficient in solving our problems and are also environment friendly. Intensified theoretical study followed by feasibility analysis on practical grounds is essential to come up with appropriate suggestions and solutions for complex issues. The event deals with study of prescribed topics and communication of the ideas to the judging panel through Research Paper presentation. ",
@@ -238,14 +206,10 @@ let data = {
         ],
       },
     ],
-    eh: [
-      "Mohit Kumar Sharma (8986744346)",
-      "Gullipalli Jahnavi  (8331092465)",
-      "Shruti (8102371772)",
-    ],
+    eh: ["Gourav Kumar", "Vandana Pussam "],
     prize: "6000",
     name: "RADIATION",
-    img:"./assets/imgs/events/Radiation (1).png"
+    img: "./assets/imgs/events/radiation.webp",
   },
   sas: {
     desc: "Propulsion systems are highly powerful driving technologies enabling the physical essence of distant places. The event deals with water propulsion system in rocket technology resulting in a working prototype showcasing the application of physical concepts. Put all your concepts of kinematics, aerodynamics & hydraulics to build a Water Rocket that covers  the maximum range. ",
@@ -266,17 +230,13 @@ let data = {
         points: ["Model making followed by Field launching. "],
       },
     ],
-    eh: [
-      "      Prince Kumar (7543033691)",
-      "Shilpi Jain(9584038248)",
-      "Rituraj Mishra(9955304635)",
-    ],
+    eh: ["Cherag Prajwal"],
     prize: "6000",
     name: "SHOOT at SIGHT",
-    img:"./assets/imgs/events/SHOOT AT SIGHT (1).jpg"
+    img: "./assets/imgs/events/shoot-at-sight.webp",
   },
   os: {
-    desc: "Cognitio’22 isn’t just limited to technical and managerial events. It also promotes the cultural aspect of a student’s life. Open Stage will ensure that none of your expectations goes unfulfilled. Be ready to be mesmerized by the performances of your batchmates. The stage is all yours!  ",
+    desc: "Cognitio’24 isn’t just limited to technical and managerial events. It also promotes the cultural aspect of a student’s life. Open Stage will ensure that none of your expectations goes unfulfilled. Be ready to be mesmerized by the performances of your batchmates. The stage is all yours!  ",
     details1: [
       "Students can participate either individually or as a team.",
       "Students can show any kind of talent like singing, dancing, shayari, rapping, etc.",
@@ -284,10 +244,10 @@ let data = {
       "Winners will be decided based on judges’ scores and audience votes.",
       "The event will only be of one round.",
     ],
-    eh: ["Prasoon Jha (8340622615)", "  Aniket Mishra (8603025125)"],
+    eh: ["Nitish Kumar"],
     prize: "4500",
     name: "OPEN STAGE",
-    img:'./assets/imgs/events/OPEN STAGE.png'
+    img: "./assets/imgs/events/open-stage.webp",
   },
   roboWar: {
     desc: "For COGNITIO 24 we propose an exhilarating Robo War event that spans across three engaging rounds, challenging students to unleash their creativity, innovation, and engineering prowess. The event is designed to foster teamwork, problem-solving skills, and hands-on experience in building and battling robots",
@@ -300,12 +260,12 @@ let data = {
       "No member will be allowed to enter in the war zone without permission of coordinators",
       "The organizers reserve the rights to change any or all of the above rules as they deem fit",
       "Violation of any the above rules will lead to disqualification",
-      "Judges' decision shall be treated as final and binding on all"
+      "Judges' decision shall be treated as final and binding on all",
     ],
-    eh: [""],
+    eh: ["Ritu Kumari", "Shivam Kumar"],
     prize: "",
     name: "ROBO WAR",
-    img:'./assets/imgs/events/OPEN STAGE.png'
+    img: "./assets/imgs/events/robo-war.webp",
   },
 };
 
@@ -319,7 +279,7 @@ const eventHeads = document.querySelector(".event-heads");
 const rulesHeading = document.querySelector(".rules");
 const rules1 = document.querySelector(".rules-sec-1");
 const rules2 = document.querySelector(".rules-sec-2");
-const eventImage = document.querySelector('.event-image');
+const eventImage = document.querySelector(".event-image");
 
 //data adding function
 
