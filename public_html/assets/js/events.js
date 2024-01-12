@@ -29,7 +29,12 @@ let data = {
     img: "./assets/imgs/events/elevator-pitch.webp",
   },
   quiriosity: {
-    desc: "",
+    desc: `India is emerging as a world leader in the field of innovation, and new age start-ups
+    are the fore runners of this development. This year's quriosity will be on start-ups. To
+    all the quiz geeks out there, brace yourself and be ready for your quizzing mettle to
+    be tested. It is time to compete with the finest brains of the institute and enrich your
+    quizzing skills. QURIOSITY provides a platform to explore the charm of science and
+    technology. To come up as a winner, you need to possess noetic and quick thinking.`,
     details1: ["Number of students in a team: 2"],
     details2: [
       {
