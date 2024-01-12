@@ -34,7 +34,6 @@
     "android >= 4"
   ],
   "dependencies": {
-    "firebase": "^9.10.0",
-    "node-sass": "^7.0.3"
+    "firebase": "^9.10.0"
   }
 }
