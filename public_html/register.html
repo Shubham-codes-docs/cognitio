@@ -560,6 +560,27 @@
           }, 5000);
           return;
         }
+
+         // Validate at least one event is selected
+        let selectedEvents = Array.from(
+                e.target.parentElement.querySelectorAll("input[name=check]:checked")
+            );
+
+            if (selectedEvents.length === 0) {
+                let p = document.createElement("p");
+                p.textContent = "Please select at least one event";
+                p.style.color = "red";
+                e.target.parentElement.insertBefore(
+                    p,
+                    e.target.parentElement.firstChild
+                );
+                setTimeout(() => {
+                    p.remove();
+                }, 5000);
+                return;
+            }
+
+            
         let events = Array.from(
           e.target.parentElement.querySelectorAll("input[name=check]:checked")
         ).map((e) => e.defaultValue);
