@@ -269,16 +269,72 @@ let data = {
   },
   roboWar: {
     desc: "For COGNITIO 24 we propose an exhilarating Robo War event that spans across three engaging rounds, challenging students to unleash their creativity, innovation, and engineering prowess. The event is designed to foster teamwork, problem-solving skills, and hands-on experience in building and battling robots",
-    details1: [
-      "The competition will be played on a knock-out basis consisting of 2 players at a time",
-      "The maximum duration of each War/Fight will be 5 minutes",
-      "The robot will win if the robot successfully immobilizes the opponent or through it out of the arena",
-      "If within 5 minutes if neither of the robot is knocked out then they will be judged by following criteria-Aggression,Control,Damage,Strategy",
-      "Match will be interrupted if communication between robot and operator breaks",
-      "No member will be allowed to enter in the war zone without permission of coordinators",
-      "The organizers reserve the rights to change any or all of the above rules as they deem fit",
-      "Violation of any the above rules will lead to disqualification",
-      "Judges' decision shall be treated as final and binding on all",
+    details1: [],
+    details2: [
+      {
+        heading: "Round 1: Hands on Workshop",
+        points: [
+          "In first round of the competition, participants will form a team of four students and will attend a workshop where teams in a controlled environment will learn to construct a basic robot and implement a preliminary attacking mechanism. The workshop not only equips participants with essential building skills but also allows them to fine-tune their designs based on practical considerations. After that a quiz will be conducted based on workshop. The performance of the team in quiz will be marked.",
+        ],
+      },
+      {
+        heading: "Round 2: Idea Submission",
+        points: [
+          `In second round of the competition, team will have to showcase their 
+          conceptualization skills by creating a design for their robots. This 
+          round encourages the use of designing software like Autocad, Solidwork etc, 
+          but if they do not know to use the software they can simply sketch it on chart paper, 
+          in order to just express their rough idea. Teams must submit their design blueprints, 
+          including the robot's structure, dimensions, and a brief description of its attacking 
+          mechanism before 16th January.`,
+          `The top 15 best performing team in round 1 and 2 will be provided robotics kit free 
+          of cost but participation certificate will be provided to all students who will attend 
+          workshop. Rest Team will have to construct robot on their own expense to compete in final round. 
+          For final round team can be allowed to make changes in their robots.`,
+        ],
+      },
+      {
+        heading: "Round 3: The Final Showdown",
+        points: [
+          `The final round is the pinnacle of the Robo War event, where teams will pit their robots against each other in a thrilling combat arena. Teams are required to adhere to specified robot dimensions and guidelines provided during the design submission phase. The combat will be a test of strategy, engineering, and teamwork, with the last robot standing declared the ultimate winner.`,
+          `The final round is the pinnacle of the Robo War event, where teams will pit their robots against each other in a thrilling combat arena. Teams are required to adhere to specified robot dimensions and guidelines provided during the design submission phase. The combat will be a test of strategy, engineering, and teamwork, with the last robot standing declared the ultimate winner.`,
+        ],
+      },
+      {
+        heading: "Robot Specifications and General Rules",
+        points: [
+          "Permissible weight: Maximum 3 kg including power equipment e.g. batteries, adapters etc.",
+          "Maximum permissible volume. Fully unfolded robot must be within the limits of 40 cm X 30cm X30 cm (l x b x h). ",
+          "Robots can have weapons such as cutters, flippers, saws, lifting devices, spinning hammers etc. Use of liquid projectiles, any kind  of inflammable liquid, flame-based weapons, radio jamming devices, high power magnets or electromagnets, are not permitted.",
+          "Use of IC Engines is not allowed.",
+          "We will provide on-site power points of 230 V AC. Participating teams need to bring their own adapters/converters (with a maximum output voltage of 12V DC) to avail AC supply.",
+          "In case of batteries, maximum allowed voltage is 12 V DC.",
+          "Each team can have maximum four members. Students from different branches can form a team.",
+          "Robots will be inspected for safety and reliability before being allowed to compete.",
+          "Disrupting opponent’s power is not allowed.",
+          "Arena is a 9 ft. X 6 ft. platform.",
+          "Organizers reserve the right to ban/disqualify any robot at any point of time, due to safety or any other reason. ",
+          "ROBOWAR organizing team have reserves the right to disqualify any participant who fails to adhere to the below mentioned game  rules.",
+        ],
+      },
+      {
+        heading: "Game Rules",
+        points: [
+          "The competition will be played on a knock-out basis consisting of 2 players at a time. ",
+          "The maximum duration of each War/Fight will be 5 minutes. ",
+          "The robot will win if the robot successfully immobilizes the opponent or through it out of the arena.",
+          "If within 5 minutes if neither of the robot is knocked out then they will be judged by following criteria:",
+          "Aggression-Aggression is judged by the frequency, severity, boldness and effectiveness of attacks deliberately initiated by the robot against its opponent. If a robot appears to have accidentally attacked an opponent, that act will not be considered Aggression.",
+          "Control-Control means a robot can attack an opponent at its weakest point, use its weapons in the most effective way, and minimize the damage caused by the opponent or its weapons.",
+          'Damage-Through deliberate action, a robot either directly or indirectly reduces the functionality, effectiveness or defensibility of an opponent. Damage is not considered relevant if a robot inadvertently harms itself. Also, if a pressure vessel or a rapidly spinning the device on a robot fragments, any damage to the opponent will not be considered "deliberate".',
+          "Strategy -The robot exhibits a combat plan that exploits the robot's strengths against the weaknesses of its opponent. Strategy is also defined as a robot exhibiting a deliberate.",
+          "Match will be interrupted if communication between robot and operator breaks.",
+          "No member will be allowed to enter in the war zone without permission of coordinators.",
+          "The organizers reserve the rights to change any or all of the above rules as they deem fit. ",
+          "Violation of any the above rules will lead to disqualification.",
+          "Violation of any the above rules will lead to disqualification.",
+        ],
+      },
     ],
     eh: ["Ritu Kumari:9471113952", "Shivam Kumar:7870417743"],
     prize: "",
@@ -298,10 +354,14 @@ const rulesHeading = document.querySelector(".rules");
 const rules1 = document.querySelector(".rules-sec-1");
 const rules2 = document.querySelector(".rules-sec-2");
 const eventImage = document.querySelector(".event-image");
+const kitTable = document.querySelector("#event-kit");
 
 //data adding function
 
 const hydrateData = (event) => {
+  if (event.name === "ROBO WAR") {
+    kitTable.classList.remove("d-none");
+  }
   branding.textContent = event.name;
   eventImage.src = event.img;
   para.textContent = event.desc;
